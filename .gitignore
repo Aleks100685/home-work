@@ -1,0 +1,55 @@
+# Virtual Environment
+venv/
+env/
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# IDE-specific
+.idea/
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Logs and databases
+*.log
+*.sqlite3
+*.sqlite
+*.db
+*.hdf5
+
+# Caches
+__pycache__/
+.cache/
+
+# Environment variables
+.env
+
+# Output files
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.zip
+*.rar
+*.tar.gz
+*.tar.xz
+*.tar
+*.gz
+
+# Others
+*.class
+*.pyc
+.DS_Store
+Thumbs.db
