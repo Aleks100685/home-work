@@ -1,6 +1,5 @@
 class Category:
     total_categories = 0
-    total_unique_products = set()
 
     def __init__(self, name, description):
         self.name = name
@@ -10,14 +9,12 @@ class Category:
 
     def add_product(self, product):
         self.products.append(product)
-        Category.total_unique_products.add(product.name)
 
 class Product:
     total_unique_products = 0
 
-    def __init__(self, name, description, price, quantity):
+    def __init__(self, name, description, price):
         self.name = name
         self.description = description
         self.price = price
-        self.quantity = quantity
         Product.total_unique_products += 1

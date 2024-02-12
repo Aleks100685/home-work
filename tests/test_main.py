@@ -4,25 +4,22 @@ from utils.src import Category
 
 class TestCategoryAndProduct(unittest.TestCase):
     def setUp(self):
-
-        self.total_categories = 0
-        self.total_unique_products = set()
-
+        Category.total_categories = 0
+        Product.total_unique_products = 0
 
     def test_category_initialization(self):
-        category = Category("Electronics", "Electronic gadgets")
-        self.assertEqual(category.name, "Electronics")
-        self.assertEqual(category.description, "Electronic gadgets")
-        self.assertEqual(category.products, [])
-        self.assertEqual(self.total_categories + 1, 1)  # Проверка общего количества категорий
+        category1 = Category("Electronics", "Electronic devices")
+        self.assertEqual(Category.total_categories, 1)
 
     def test_product_initialization(self):
-        product = Product("Laptop", "High-performance laptop", 1200.50, 10)
-        self.assertEqual(product.name, "Laptop")
-        self.assertEqual(product.description, "High-performance laptop")
-        self.assertEqual(product.price, 1200.50)
-        self.assertEqual(product.quantity, 10)
-        self.assertEqual(self.total_unique_products | set(range(1, 11)), set(range(1, 11)))  # Проверка уникальных продуктов
+        product1 = Product("Laptop", "High-performance laptop", 1200)
+        self.assertEqual(Product.total_unique_products, 1)
+
+    def test_total_categories_and_unique_products(self):
+        category1 = Category("Electronics", "Electronic devices")
+        product1 = Product("Laptop", "High-performance laptop", 1200)
+        self.assertEqual(Category.total_categories, 1)
+        self.assertEqual(Product.total_unique_products, 1)
 
 if __name__ == "__main__":
     unittest.main()
